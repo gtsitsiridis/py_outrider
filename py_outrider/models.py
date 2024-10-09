@@ -82,7 +82,7 @@ class Autoencoder_Model():
         nr_samples = adata.n_obs
         sample_idx = np.arange(nr_samples)
 
-        if batch_size is None or batch_size >= n_samples:
+        if batch_size is None or batch_size >= nr_samples:
             return [sample_idx]
 
         np.random.shuffle(sample_idx)
